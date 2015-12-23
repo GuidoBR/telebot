@@ -165,23 +165,6 @@ class WebhookHandler(webapp2.RequestHandler):
         ]
         return random.choice(response)
 
-    def alemanha(self):
-        response = [
-            'E fugiram pra Alemanha...',
-            'O Ayrton ja voltou de la?',
-            'Vamos?',
-            'Todo dia um 7x1 diferente...'
-        ]
-        return random.choice(response)
- 
-    def starwars(self):
-        response = [
-            'When 900 years old, you reach... Look as good, you will not',
-            'Come to the bot side!',          
-            'IT\'S A TRAP!'        
-        ]
-        return random.choice(response)
-
     def image(self):
         img = Image.new('RGB', (512, 512))
         base = random.randint(0, 16777216)
@@ -196,9 +179,6 @@ class WebhookHandler(webapp2.RequestHandler):
 
     def carlisa(self):
         return "Elingrid <3".decode('utf-8')
-        
-    def lumateus(self):
-        return "Aaaa... Lá vão eles de novo pro bequinho.. ¬¬".decode('utf-8')
 
     def nude(self):
         nude_url = 'http://www.naosalvo.com.br/wp-content/uploads/2015/03/nudesmanda'
@@ -280,14 +260,8 @@ class WebhookHandler(webapp2.RequestHandler):
             reply(self.elingrid())
         elif 'carlisa' in text or 'Carlisa' in text:
             reply(self.carlisa())
-        elif 'lumateus' in text or 'Lumateus' in text:
-            reply(self.lumateus())
         elif 'lotr' in text or 'LotR' in text or 'Gandalf' in text:
             reply(self.lotr())
-        elif 'alemanha' in text or 'Alemanha' in text:
-            reply(self.alemanha())
-        elif 'star wars' in text or 'Star Wars' in text or 'SW' in text:
-            reply(self.starwars())
         elif 'image me' in text:
             reply('TODO')
             # google search images
@@ -315,6 +289,10 @@ class WebhookHandler(webapp2.RequestHandler):
         elif 'GoT' in text or 'Game of Thrones' in text or 'game of thrones' in text:
             response = 'You know nothing, Jon Snow'
             reply(response)
+        elif 'his name is' in text:
+            reply(img = 'https://i.ytimg.com/vi/XgUB3lF9IQA/maxresdefault.jpg')
+        elif '\safadao' in text:
+            reply(img = 'https://media.giphy.com/media/xTka03ETU8TqL2s0eY/giphy.gif')
 
 
 app = webapp2.WSGIApplication([
