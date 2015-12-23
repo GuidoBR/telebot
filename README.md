@@ -6,7 +6,7 @@ To Do
 
 - Mandar "Exposições da semana no CCBB" nas segunda-feira 
 - Mandar "Filmes da semana" nas segunda-feira
-- Bom Dia em Alemão
+- Bom Dia em Alemão  ==> DONE
 - VidaDeMerda
 - Google Image Search
 - Reverse Image Search
@@ -22,4 +22,4 @@ To Do
 - Nerdcast da semana
 - 3 Leis da Robótica
 - treta/lets get ready to rumble
-- /ingrid -> badernista
+- /ingrid -> badernista  ==>  DONE
