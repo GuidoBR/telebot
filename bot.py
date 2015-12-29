@@ -6,6 +6,9 @@ from PIL import Image
 import StringIO
 
 MESSAGES = {
+    'codigo': [
+        'Vocês podem ver do que sou feito em: https://github.com/GuidoBR/bullybot'.decode('utf-8')
+    ],
     'sex': [
         'You are too human for me.',
         'You are not my type.',

@@ -139,6 +139,8 @@ class WebhookHandler(webapp2.RequestHandler):
                 reply(img=bot.drawImage())
             elif text == '/ingrid':
                 reply(msg=resposta('ingrid').get('msg'))
+            elif text == '/codigo':
+                reply(msg=resposta('codigo').get('msg'))
         else:
             text_search = {
                 'romero britto': {'img': bot.romero()},
