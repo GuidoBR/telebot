@@ -60,7 +60,7 @@ MESSAGES = {
         'You know nothing, Jon Snow'
     ],
     'elingrid': [
-        "Elingrid é o melhor ship".decode('utf-8')
+        "Elingrid é o segundo melhor ship, depois apenas de Letas + Boyega <3".decode('utf-8')
     ],
     'carlisa': [
         "Elingrid <3".decode('utf-8')
