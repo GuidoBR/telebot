@@ -14,6 +14,7 @@ import multipart
 from google.appengine.api import urlfetch
 from google.appengine.ext import ndb
 import webapp2
+import re
 
 TOKEN = '168191309:AAEdER88qh8Q34Hdt-yUZSBNhiU_mMfMUOw'
 
@@ -43,7 +44,14 @@ def getEnabled(chat_id):
     return False
 
 
+def findWholeWord(word, text):
+    return re.compile(
+        r'\b({0})\b'.format(word),
+        flags=re.IGNORECASE
+    ).search(text)
+
 # ================================
+
 
 class MeHandler(webapp2.RequestHandler):
 
@@ -147,6 +155,7 @@ class WebhookHandler(webapp2.RequestHandler):
                 'Romero Britto': {'img': bot.romero()},
                 'nude': {'img': bot.nude()},
                 'sex': resposta('sex'),
+                'sexo': resposta('sex'),
                 'elingrid': resposta('elingrid'),
                 'Elingrid': resposta('elingrid'),
                 'carlisa': resposta('carlisa'),
@@ -178,7 +187,7 @@ class WebhookHandler(webapp2.RequestHandler):
             }
 
             for key, value in text_search.iteritems():
-                if key in text:
+                if findWholeWord(key, text):
                     reply(msg=value.get('msg'), img=value.get('img'))
 
 app = webapp2.WSGIApplication([
